@@ -87,7 +87,6 @@ To reproduce the dataset, place the raw file in:
 data/raw/accepted_2007_to_2018Q4.csv.gz
 ```
 
----
 
 ### Data Creation Pipeline
 
@@ -101,8 +100,6 @@ This notebook contains:
 * Code used to construct the dataset
 * Bias identification and mitigation discussion
 * Rationale for key data decisions
-
----
 
 ### Output Data
 
@@ -118,7 +115,6 @@ data/final/
 
 These tables are structured using the relational model and serve as the primary dataset for downstream analysis.
 
----
 
 ### Notes on Reproducibility
 
