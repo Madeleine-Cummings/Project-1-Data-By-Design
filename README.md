@@ -69,3 +69,57 @@ Supporting materials are available in the [Background Reading](./Background%20Re
 | Lending Risk Analysis: Key Considerations | Covers modern tools including ML and advanced analytics in lending | [PDF](Background%20Reading/Lending%20Risk%20Analysis_%20Key%20Considerations%20(1).pdf) |
 
 ---
+
+## Data Creation
+
+### Overview
+
+The dataset used in this project is derived from LendingClub loan data and focuses on predicting loan default risk using accepted loan records. Due to the size and complexity of the dataset, a structured data creation pipeline was developed to clean, transform, and organize the data into a relational format suitable for analysis.
+
+The raw dataset is not stored directly in this repository due to size constraints. It is available via UVA OneDrive:
+
+**Raw Data Link:**
+[https://myuva-my.sharepoint.com/:u:/g/personal/uwg9at_virginia_edu/IQCyWiKPDUB7Ro0gxu6LDfrxAcvt49M7NXSkXUGDtt4b-0M?e=zHcFJo](https://myuva-my.sharepoint.com/:u:/g/personal/uwg9at_virginia_edu/IQCyWiKPDUB7Ro0gxu6LDfrxAcvt49M7NXSkXUGDtt4b-0M?e=zHcFJo)
+
+To reproduce the dataset, place the raw file in:
+
+```id="91d2rm"
+data/raw/accepted_2007_to_2018Q4.csv.gz
+```
+
+---
+
+### Data Creation Pipeline
+
+The full data creation process — including data ingestion, cleaning, feature selection, target variable creation, and relational table construction — is implemented in the notebook below:
+
+* [Data Creation Notebook](notebooks/Data_Creation_.ipynb)
+
+This notebook contains:
+
+* Detailed data provenance and processing steps
+* Code used to construct the dataset
+* Bias identification and mitigation discussion
+* Rationale for key data decisions
+
+---
+
+### Output Data
+
+The final processed datasets are included in this repository:
+
+```id="k4gtn1"
+data/final/
+    loans.csv
+    borrowers.csv
+    credit.csv
+    loan_details.csv
+```
+
+These tables are structured using the relational model and serve as the primary dataset for downstream analysis.
+
+---
+
+### Notes on Reproducibility
+
+The data creation pipeline is designed to be reproducible given access to the raw dataset. DuckDB is used to efficiently query and process the compressed data without requiring full in-memory loading.
