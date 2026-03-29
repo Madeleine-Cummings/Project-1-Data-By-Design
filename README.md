@@ -119,3 +119,69 @@ These tables are structured using the relational model and serve as the primary 
 ### Notes on Reproducibility
 
 The data creation pipeline is designed to be reproducible given access to the raw dataset. DuckDB is used to efficiently query and process the compressed data without requiring full in-memory loading.
+
+---
+
+## Metadata
+
+### Schema 
+
+![ER Diagram](docs/ER%20Diagram.png)
+
+### Data
+
+
+| Table Name   | Description                                                                                                 | Link                                                                                                             |
+| ------------ | ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| loans        | Core loan-level data including loan amount, interest rate, status, and target variable (`default_flag`)     | [View](https://github.com/Madeleine-Cummings/Project-1-Data-By-Design/blob/main/data/processed/loans.csv)        |
+| borrowers    | Borrower demographic and financial information such as income, employment length, and home ownership        | [View](https://github.com/Madeleine-Cummings/Project-1-Data-By-Design/blob/main/data/processed/borrowers.csv)    |
+| credit       | Credit history and financial behavior metrics including FICO range, utilization, and delinquency indicators | [View](https://github.com/Madeleine-Cummings/Project-1-Data-By-Design/blob/main/data/processed/credit.csv)       |
+| loan_details | Loan-specific categorical attributes such as purpose, grade, and sub-grade                                  | [View](https://github.com/Madeleine-Cummings/Project-1-Data-By-Design/blob/main/data/processed/loan_details.csv) |
+
+
+### Data Dictionary: Features
+
+| Name            | Data Type        | Description                              | Example              |
+| --------------- | ---------------- | ---------------------------------------- | -------------------- |
+| id              | integer          | Unique identifier for each loan/borrower | 123456               |
+| loan_amnt       | float            | Total loan amount requested              | 10000.0              |
+| term            | string           | Loan duration                            | "36 months"          |
+| int_rate        | float            | Interest rate (%)                        | 13.56                |
+| installment     | float            | Monthly loan payment                     | 340.12               |
+| loan_status     | string           | Loan outcome/status                      | "Fully Paid"         |
+| default_flag    | integer (binary) | Default indicator (1 = default, 0 = not) | 1                    |
+| emp_length      | string           | Employment length                        | "5 years"            |
+| home_ownership  | string           | Home ownership status                    | "RENT"               |
+| annual_inc      | float            | Annual income                            | 65000.0              |
+| fico_range_low  | integer          | Lower bound of FICO score                | 680                  |
+| fico_range_high | integer          | Upper bound of FICO score                | 699                  |
+| open_acc        | integer          | Number of open credit accounts           | 8                    |
+| pub_rec         | integer          | Number of public records                 | 0                    |
+| revol_bal       | float            | Revolving credit balance                 | 12000.0              |
+| revol_util      | float            | Credit utilization (%)                   | 45.3                 |
+| total_acc       | integer          | Total credit accounts                    | 20                   |
+| dti             | float            | Debt-to-income ratio                     | 18.5                 |
+| purpose         | string           | Loan purpose                             | "debt_consolidation" |
+| grade           | string           | Credit grade                             | "B"                  |
+| sub_grade       | string           | Detailed credit grade                    | "B3"                 |
+
+### Data dictionary: Quantification of Uncertainty 
+
+
+| Feature         | Missing (%) | Std Dev  | Source of Uncertainty              | Notes                                         |
+| --------------- | ----------- | -------- | ---------------------------------- | --------------------------------------------- |
+| loan_amnt       | 0.00%       | 8643.76  | Borrower choice + loan structuring | Wide spread in loan sizes                     |
+| int_rate        | 0.00%       | —        | Assigned by platform               | Minimal uncertainty                           |
+| installment     | 0.00%       | —        | Derived variable                   | Deterministic from loan terms                 |
+| annual_inc      | 0.00%       | 87805.72 | Self-reported income               | High variability and potential reporting bias |
+| fico_range_low  | 0.00%       | —        | Range-based measurement            | Does not capture exact score                  |
+| fico_range_high | 0.00%       | —        | Range-based measurement            | Interval uncertainty                          |
+| open_acc        | 0.00%       | —        | Reporting lag                      | May not reflect real-time accounts            |
+| pub_rec         | 0.00%       | —        | Reporting accuracy                 | Rare but may be underreported                 |
+| revol_bal       | 0.00%       | —        | Reporting + updates                | Can fluctuate over time                       |
+| revol_util      | 0.04%       | —        | Derived + reporting                | Small amount of missing data                  |
+| total_acc       | 0.00%       | —        | Credit history reporting           | Generally reliable                            |
+| delinq_2yrs     | 0.00%       | —        | Time window limitation             | Only recent delinquencies included            |
+| inq_last_6mths  | 0.00%       | —        | Time window limitation             | Limited to recent credit inquiries            |
+| dti             | 0.002%      | 9.51     | Derived + income uncertainty       | Sensitive to income accuracy                  |
+
