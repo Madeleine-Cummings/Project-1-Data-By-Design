@@ -1,5 +1,32 @@
 # DS 4320 Project 1:  INSERT NAME
 
+---
+## Problem Definition
+
+**General Problem:**  
+Can we predict whether an individual will default on a loan based on a variety of borrower characteristics?
+
+**Refined Problem:**  
+Can we estimate the probability of loan default for borrowers with little or no credit history using alternative financial indicators (e.g., income, debt-to-income ratio) and loan attributes, in the absence of traditional credit score data?
+
+
+### Rationale for Refinement
+The general problem of predicting loan default risk is broad and applies to many types of borrowers and lending contexts. Existing models often rely heavily on credit history as a primary predictor of default. However, this approach becomes less effective when evaluating borrowers with limited credit history, as they lack sufficient historical data for traditional credit scoring methods. By narrowing the focus to this group, the project addresses a meaningful gap in current risk models and explores how alternative financial characteristics and loan attributes can be used to assess default risk when traditional credit signals are incomplete.
+
+### Motivation
+Predicting loan default risk is essential for financial institutions seeking to minimize losses while expanding lending opportunities. Current evaluation methods disadvantage individuals with limited credit history, making it difficult for them to access loans and build credit over time. This project aims to explore alternative approaches to evaluating borrower risk by leveraging additional financial and loan-related features. By improving risk assessment for these individuals, the project supports more inclusive lending practices while maintaining effective risk management.
+
+
+### Press Release
+
+**Headline:**  
+When Credit Falls Short, Data Can Fill the Gap  
+
+**Link:**  
+[View Press Release](docs/press_release.md)
+
+--- 
+
 ## Domain Exposition 
 For a more detailed analysis, see:  
 [Full Domain Exposition Notebook](notebooks/Domain_Exposition.ipynb)
@@ -7,8 +34,6 @@ For a more detailed analysis, see:
 This project operates in the domain of credit risk analysis and financial lending. Financial institutions must evaluate whether to lend money to individuals while minimizing the risk of financial loss. Traditionally, this evaluation relies heavily on credit history, as borrowers with strong credit histories are generally less likely to default. However, this creates challenges for individuals with limited or no credit history, as they lack the historical data typically used to assess risk.  
 
 To address this gap, modern data science techniques incorporate alternative financial and behavioral indicators to better estimate default risk and support more inclusive and accurate lending decisions.
-
----
 
 ### Key Terminology
 
@@ -25,7 +50,6 @@ To address this gap, modern data science techniques incorporate alternative fina
 | Borrower | Individual or entity receiving a loan |
 | Loan Attributes | Characteristics such as loan amount, rate, and term |
 
----
 
 ### Background Reading
 
