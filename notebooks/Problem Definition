@@ -1,0 +1,19 @@
+
+# Problem Definition
+## General Problem:
+Can we predict whether an individual will default on a loan based on a variety of borrower characteristics?
+
+## Refined Problem:
+Can we predict the probability of loan default for borrowers with little or no credit history using alternative financial indicators (e.g., income, debt-to-income ratio) and loan attributes, in the absence of traditional credit score data?
+
+## Rationale for refinement
+The general problem of predicting loan default risk is broad and applies to many types of borrowers and lending situations. While many existing models can assess general credit risk, they often rely heavily on borrowers’ credit history as a primary predictor of default. However, this approach becomes less effective when evaluating borrowers with limited credit history, who lack sufficient historical data for traditional credit scoring methods. Because credit history is typically a strong predictor of loan repayment behavior, lenders must rely on alternative indicators when such information is limited. Focusing on borrowers with limited credit history allows this project to explore how other borrower financial characteristics and loan attributes can be used to evaluate default risk in situations where traditional credit signals are incomplete.
+
+## Motivation for project
+Predicting default risk on loans is critical for financial institutions to minimize risk while maximizing lending opportunities. Current lending evaluation methods rely heavily on credit history, which means individuals with limited credit histories may be disadvantaged when applying for loans. As a result, these borrowers may struggle to access credit and build their credit profiles over time. This project aims to explore alternative ways to evaluate potential borrowers when their credit history alone is not sufficient to make a reliable risk assessment. By examining other financial characteristics and loan attributes, the project seeks to identify additional indicators that may help lenders better assess default risk for borrowers with limited credit history.
+
+## Press Release
+Press Release Headline:
+When Credit Falls Short, Data Can Fill the Gap
+
+Press Release: [View Press Release](docs/press_release.md)
