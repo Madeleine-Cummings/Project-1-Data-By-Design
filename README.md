@@ -185,3 +185,4 @@ The data creation pipeline is designed to be reproducible given access to the ra
 | inq_last_6mths  | 0.00%       | —        | Time window limitation             | Limited to recent credit inquiries            |
 | dti             | 0.002%      | 9.51     | Derived + income uncertainty       | Sensitive to income accuracy                  |
 
+Uncertainty in this dataset’s numerical features is assessed through missingness and variability, measured using standard deviation. Overall, the dataset contains very little missing data, indicating a high level of completeness. However, certain features, such as annual income, exhibit substantial variability, reflecting the wide range of borrower financial situations in real life. Additionally, some variables may introduce uncertainty due to being self-reported or derived, and the data collection process itself presents potential sources of bias that should be considered during analysis.
