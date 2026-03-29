@@ -17,17 +17,5 @@ This project proposes an alternative approach for evaluating borrowers who have 
 As seen below, around 45 million people in the US are credit invisible.
 https://www.cnbc.com/2015/05/05/credit-invisible-26-million-have-no-credit-score.html
 
-```python
-import matplotlib.pyplot as plt
-
-categories = ["No Credit History", "Unscorable Credit History"]
-values = [26, 19]
-
-plt.figure(figsize=(6,4))
-plt.bar(categories, values)
-plt.ylabel("Millions of Americans")
-plt.title("Americans Without a Credit Score")
-plt.show()
-```
-
 ![Americans Without a Credit Score](Credit%20Invisible%20Chart%20for%20Press%20Release.png)
+
