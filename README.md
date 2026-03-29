@@ -1,5 +1,10 @@
 # DS 4320 Project 1:  INSERT NAME
 
+## Data
+
+This dataset is stored in a UVA One drive folder due to file size restraints 
+[Access Data Folder](https://myuva-my.sharepoint.com/:f:/g/personal/uwg9at_virginia_edu/IgBmAq3QAvxeT59EnEGAwvdnAbbKbjczKylQS1X1a_0abNY?e=Oa1FoP)
+
 ---
 ## Problem Definition
 
