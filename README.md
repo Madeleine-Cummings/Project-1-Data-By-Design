@@ -1,8 +1,8 @@
 # DS 4320 Project 1:  INSERT NAME
 
 ## Domain Exposition 
-
-## Domain Exposition
+For a more detailed analysis, see:  
+[Full Domain Exposition Notebook](notebooks/Domain_Exposition.ipynb)
 
 This project operates in the domain of credit risk analysis and financial lending. Financial institutions must evaluate whether to lend money to individuals while minimizing the risk of financial loss. Traditionally, this evaluation relies heavily on credit history, as borrowers with strong credit histories are generally less likely to default. However, this creates challenges for individuals with limited or no credit history, as they lack the historical data typically used to assess risk.  
 
@@ -29,17 +29,14 @@ To address this gap, modern data science techniques incorporate alternative fina
 
 ### Background Reading
 
-Supporting materials are available in the [references folder](Background Reading/).
+Supporting materials are available in the [Background Reading](./Background%20Reading/).
 
 | Title | Description | Link |
 |------|------------|------|
-| Machine Learning and Metaheuristics Approach for Individual Credit Risk Assessment | Reviews machine learning approaches for predicting credit risk | [PDF](references/Machine%20Learning%20and%20Metaheuristics%20Approach%20for%20Individual%20Credit%20Risk%20Assessment_%20A%20Systematic%20Literature%20Review%20-%20PMC%20(1).pdf) |
-| Credit Scoring Alternatives for Those Without Credit | Explores alternative methods for evaluating borrowers without credit scores | [PDF](references/Credit%20Scoring%20Alternatives%20for%20Those%20Without%20Credit%20_%20U.S.%20GAO%20(1).pdf) |
-| 3 Ways Lenders Can Evaluate Credit Invisibles | Discusses fintech approaches to assessing limited-credit borrowers | [PDF](references/3%20ways%20lenders%20can%20evaluate%20credit%20invisibles%20_%20Plaid%20(1).pdf) |
-| The Importance of Loan Risk Rating Systems | Explains institutional risk rating systems for loans | [PDF](references/The%20Importance%20of%20Loan%20Risk%20Rating%20Systems%20(1).pdf) |
-| Lending Risk Analysis: Key Considerations | Covers modern tools including ML and advanced analytics in lending | [PDF](references/Lending%20Risk%20Analysis_%20Key%20Considerations%20(1).pdf) |
+| Machine Learning and Metaheuristics Approach for Individual Credit Risk Assessment | Reviews machine learning approaches for predicting credit risk | [PDF](Background%20Reading/Machine%20Learning%20and%20Metaheuristics%20Approach%20for%20Individual%20Credit%20Risk%20Assessment_%20A%20Systematic%20Literature%20Review%20-%20PMC%20(1).pdf) |
+| Credit Scoring Alternatives for Those Without Credit | Explores alternative methods for evaluating borrowers without credit scores | [PDF](Background%20Reading/Credit%20Scoring%20Alternatives%20for%20Those%20Without%20Credit%20_%20U.S.%20GAO%20(1).pdf) |
+| 3 Ways Lenders Can Evaluate Credit Invisibles | Discusses fintech approaches to assessing limited-credit borrowers | [PDF](Background%20Reading/3%20ways%20lenders%20can%20evaluate%20credit%20invisibles%20_%20Plaid%20(1).pdf) |
+| The Importance of Loan Risk Rating Systems | Explains institutional risk rating systems for loans | [PDF](Background%20Reading/The%20Importance%20of%20Loan%20Risk%20Rating%20Systems%20(1).pdf) |
+| Lending Risk Analysis: Key Considerations | Covers modern tools including ML and advanced analytics in lending | [PDF](Background%20Reading/Lending%20Risk%20Analysis_%20Key%20Considerations%20(1).pdf) |
 
 ---
-
-For a more detailed analysis, see:  
-[Full Domain Exposition Notebook](notebooks/Domain_Exposition.ipynb)
