@@ -29,3 +29,5 @@ plt.ylabel("Millions of Americans")
 plt.title("Americans Without a Credit Score")
 plt.show()
 ```
+
+![Americans Without a Credit Score](Credit%20Invisible%20Chart%20for%20Press%20Release.png)
