@@ -10,7 +10,7 @@ This project develops a data-driven approach to predicting loan default risk for
 
 ### Net ID: Uwg9at
 
-### DOI- PENDING
+### DOI- (https://doi.org/10.5281/zenodo.19325403)
 
 ### Press Release - [View Press Release](docs/press_release.md)
 
