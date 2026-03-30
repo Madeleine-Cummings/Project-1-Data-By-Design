@@ -111,16 +111,9 @@ data/raw/accepted_2007_to_2018Q4.csv.gz
 
 ### Data Creation Pipeline
 
-The full data creation process — including data ingestion, cleaning, feature selection, target variable creation, and relational table construction — is implemented in the notebook below:
+The full data creation process—including data provenance, feature selection, bias identification, and key design decisions—is documented in the notebook below:
 
-* [Data Creation Notebook](notebooks/Data_Creation_.ipynb)
-
-This notebook contains:
-
-* Detailed data provenance and processing steps
-* Code used to construct the dataset
-* Bias identification and mitigation discussion
-* Rationale for key data decisions
+* [Data Creation Documentation](notebooks/Data_Creation_.ipynb)
 
 ### Output Data
 
@@ -134,7 +127,7 @@ data/final/
     loan_details.csv
 ```
 
-These tables are structured using the relational model and serve as the primary dataset for downstream analysis.
+These tables are connected through a shared identifier (`id`) and together form a relational dataset used for analysis.
 
 
 ### Notes on Reproducibility
