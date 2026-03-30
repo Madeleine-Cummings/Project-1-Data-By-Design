@@ -26,6 +26,10 @@ This dataset is stored in a UVA One drive folder due to file size restraints
 
 ### Lisence - MIT License (see [LICENSE.md](LICENSE.md))
 
+### Coding Standards
+
+This project uses Python and DuckDB with clear structure and inline comments to support readability. Basic error handling is included, and the pipeline is designed to be reproducible and modular.
+
 ---
 ## Problem Definition
 
