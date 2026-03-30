@@ -93,9 +93,11 @@ Supporting materials are available in the [Background Reading](./Background%20Re
 
 ## Data Creation
 
-### Overview
+For more detailed information on the data creation process, including data provenance, feature selection, bias considerations, and key design decisions, see the [Data Creation Documentation](notebooks/Data_Creation_.ipynb).
 
-The dataset used in this project is derived from LendingClub loan data and focuses on predicting loan default risk using accepted loan records. Due to the size and complexity of the dataset, a structured data creation pipeline was developed to clean, transform, and organize the data into a relational format suitable for analysis.
+### Provenance
+
+The dataset used in this project comes from LendingClub, a peer-to-peer lending platform that provides publicly available loan data. The dataset includes records of accepted loans, which contain information about borrower financial characteristics, credit history, and loan attributes. Only accepted loans were used, as loan outcomes (default or repayment) are necessary to build a predictive model. The data was obtained in compressed CSV format and processed using DuckDB to efficiently handle its large size.
 
 The raw dataset is not stored directly in this repository due to size constraints. It is available via UVA OneDrive:
 
@@ -107,13 +109,27 @@ To reproduce the dataset, place the raw file in:
 ```id="91d2rm"
 data/raw/accepted_2007_to_2018Q4.csv.gz
 ```
+### Code 
 
 
-### Data Creation Pipeline
+| File Name                               | Description                                                                                                                             | Link                                                                                                                  |
+| --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| creating_dataset.py (Load Data)         | Loads the raw Lending Club dataset from compressed CSV format into DuckDB using `read_csv_auto`, with error handling for malformed rows | [View Code](https://github.com/Madeleine-Cummings/Project-1-Data-By-Design/blob/main/source_code/creating_dataset.py) |
+| creating_dataset.py (Clean Data)        | Selects relevant loan, borrower, and credit features and filters out rows with missing loan outcomes to create a cleaned dataset        | [View Code](https://github.com/Madeleine-Cummings/Project-1-Data-By-Design/blob/main/source_code/creating_dataset.py) |
+| creating_dataset.py (Create Target)     | Engineers a binary target variable (`default_flag`) from the `loan_status` field to indicate whether a borrower defaulted               | [View Code](https://github.com/Madeleine-Cummings/Project-1-Data-By-Design/blob/main/source_code/creating_dataset.py) |
+| creating_dataset.py (Relational Tables) | Splits the cleaned dataset into normalized relational tables (loans, borrowers, credit, loan_details) and exports them as CSV files     | [View Code](https://github.com/Madeleine-Cummings/Project-1-Data-By-Design/blob/main/source_code/creating_dataset.py) |
 
-The full data creation process, including data provenance, feature selection, bias identification, and key design decisions, is documented in the notebook below:
+### Bias Identification 
 
-* [Data Creation Documentation](notebooks/Data_Creation_.ipynb)
+Several sources of bias may be present in this dataset. First, the data only includes individuals who applied for loans through LendingClub, which may not represent the broader population of borrowers. Second, because the dataset includes only approved loans, it reflects a pre-selected group that likely already met certain risk criteria. Additionally, some variables, such as income, are self-reported and may contain inaccuracies. Finally, focusing on borrowers with low credit history introduces subgroup bias, as patterns observed may not generalize to all borrowers.
+
+### Bias Mitigation 
+
+To address these biases, results are interpreted within the context of the dataset rather than generalized to all potential borrowers. The analysis focuses on understanding patterns within the selected population while acknowledging its limitations. Model performance is evaluated carefully to avoid misleading conclusions due to class imbalance, and attention is given to ensuring that predictions do not disproportionately misclassify certain groups of borrowers.
+
+### Rationale
+
+Several key decisions were made during the data creation process. Only accepted loans were used because loan outcomes are required to define default behavior. DuckDB was chosen to efficiently process large compressed datasets without exceeding memory limits. A subset of relevant features was selected to reduce noise and improve interpretability, focusing on variables available at the time of loan approval. Certain variables, such as geographic identifiers and post-loan outcomes, were excluded to reduce bias and ensure the model reflects a realistic lending scenario.
 
 ### Output Data
 
