@@ -10,12 +10,20 @@ Traditional loan risk models heavily rely on using past credit history to evalua
 
 ## Solution description
 
-This project proposes an alternative approach for evaluating borrowers who have little or no credit history. By analyzing borrower financial characteristics and loan attributes, the project develops a predictive model that estimates the likelihood that a borrower will default on a loan. This approach provides a more standardized method for assessing risk, helping lenders make fairer and more informed loan decisions. In addition, the model could help potential borrowers better understand their likelihood of receiving a loan, allowing them to plan their financial decisions more effectively.  
+This project offers a new way to evaluate borrowers by looking beyond traditional credit scores. Instead of relying only on past credit history, it considers a broader set of financial factors—such as income, existing debt, and loan details—to better understand a person’s ability to repay a loan.
 
-### item 5
+By bringing this information together, the model builds a clearer picture of borrowers who may not have an established credit history. The analysis focuses specifically on individuals who are often overlooked by traditional systems, helping to identify patterns that signal financial risk.
+
+The results show that common approaches can appear accurate while still missing many borrowers who are likely to default. By adjusting the way risk is measured, this project improves the ability to identify those higher-risk cases, which is critical for lenders.
+
+Overall, this approach creates a more balanced and fair way to evaluate borrowers—helping financial institutions make smarter decisions while giving more people a chance to access credit.
+
+### Diagram
 
 As seen below, around 45 million people in the US are credit invisible.
 https://www.cnbc.com/2015/05/05/credit-invisible-26-million-have-no-credit-score.html
 
 ![Americans Without a Credit Score](Credit%20Invisible%20Chart%20for%20Press%20Release.png)
+
+![Pipeline Image](pipeline_image.png)
 
