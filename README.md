@@ -111,7 +111,7 @@ data/raw/accepted_2007_to_2018Q4.csv.gz
 
 ### Data Creation Pipeline
 
-The full data creation process—including data provenance, feature selection, bias identification, and key design decisions—is documented in the notebook below:
+The full data creation process, including data provenance, feature selection, bias identification, and key design decisions, is documented in the notebook below:
 
 * [Data Creation Documentation](notebooks/Data_Creation_.ipynb)
 
