@@ -1,9 +1,30 @@
-# DS 4320 Project 1:  INSERT NAME
+# DS 4320 Project 1:  When Credit Falls Short: Predicting Loan Default Without Credit History
 
-## Data
+## Executive Summary
+
+This project develops a data-driven approach to predicting loan default risk for borrowers with limited or no credit history. Using LendingClub data, a structured relational dataset is constructed through a full data pipeline that includes data ingestion, cleaning, transformation, and storage using DuckDB. The analysis leverages alternative financial indicators such as income, debt-to-income ratio, and loan attributes to estimate default probability in the absence of traditional credit scores. A machine learning model is implemented to evaluate borrower risk, and results are visualized to support interpretation and decision-making. The goal of this project is to improve credit risk assessment for underserved populations while maintaining effective risk management for lenders.
+
+---
+
+### Name- Madeleine Cummings
+
+### Net ID: Uwg9at
+
+### DOI- PENDING
+
+### Press Release - [View Press Release](docs/press_release.md)
+
+### Data
 
 This dataset is stored in a UVA One drive folder due to file size restraints 
 [Access Data Folder](https://myuva-my.sharepoint.com/:f:/g/personal/uwg9at_virginia_edu/IgBmAq3QAvxeT59EnEGAwvdnAbbKbjczKylQS1X1a_0abNY?e=Oa1FoP)
+
+### Pipeline
+
+- [Pipeline Notebook](https://github.com/Madeleine-Cummings/Project-1-Data-By-Design/tree/main/pipeline/Pipeline.ipynb)
+- [Pipeline Markdown](https://github.com/Madeleine-Cummings/Project-1-Data-By-Design/tree/main/pipeline/Pipeline.md)
+
+### Lisence - MIT License (see [LICENSE.md](LICENSE.md))
 
 ---
 ## Problem Definition
